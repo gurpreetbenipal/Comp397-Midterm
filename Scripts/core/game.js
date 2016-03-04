@@ -13,7 +13,15 @@ var end;
 var assetData = [
     // Add your Assets here
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
-    { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" }
+    { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
+    { id: "RollButton", src: "../../Assets/images/Roll.png" },
+    { id: "1", src: "../../Assets/images/1.png" },
+    { id: "2", src: "../../Assets/images/2.png" },
+    { id: "3", src: "../../Assets/images/3.png" },
+    { id: "4", src: "../../Assets/images/4.png" },
+    { id: "5", src: "../../Assets/images/5.png" },
+    { id: "6", src: "../../Assets/images/6.png" },
+    { id: "ButtonPressSound", src: "../../Assets/audio/buttonpress.wav" }
 ];
 function preload() {
     assets = new createjs.LoadQueue();
