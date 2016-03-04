@@ -16,9 +16,9 @@ module scenes {
         public start(): void {
             //Add Menu Label
             this._menuLabel = new objects.Label(
-                "MENU SCENE", "60px Consolas",
-                "#000000",
-                config.Screen.CENTER_X, config.Screen.CENTER_Y);
+                "MENU SCENE", "60px Cambria",
+                "#FFCC00",
+                config.Screen.CENTER_X, config.Screen.CENTER_Y-100);
             this.addChild(this._menuLabel);
             
             
@@ -26,7 +26,7 @@ module scenes {
             this._startButton = new objects.Button(
                 "StartButton",
                 config.Screen.CENTER_X,
-                config.Screen.CENTER_Y + 180);
+                config.Screen.CENTER_Y);
             this.addChild(this._startButton);
             
             // Start Button event listener
@@ -47,6 +47,10 @@ module scenes {
         
         // LEFT_CAVE Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
+            
+            /*Play ButtonPress Sound*/
+            createjs.Sound.play("ButtonPressSound"); 
+            
             // Switch to the LEFT_CAVE Scene
             scene = config.Scene.PLAY;
             changeScene();

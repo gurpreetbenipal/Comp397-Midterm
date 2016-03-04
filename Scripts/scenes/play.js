@@ -31,10 +31,10 @@ var scenes;
             this._dice2.y = 100;
             this.addChild(this._dice2);
             //Add the Label for Dice 1 Result
-            this._label1 = new objects.Label(this._number1.toString(), "bold 20px Cambria", "#000000", 165, 300);
+            this._label1 = new objects.Label(this._number1.toString(), "bold 20px Cambria", "#B30000", 165, 300);
             this.addChild(this._label1);
             //Add the Label for Dice 1 Result
-            this._label2 = new objects.Label(this._number2.toString(), "bold 20px Cambria", "#000000", 465, 300);
+            this._label2 = new objects.Label(this._number2.toString(), "bold 20px Cambria", "#B30000", 465, 300);
             this.addChild(this._label2);
             //Add the Roll Button to the scene
             this._rollButton = new objects.Button("RollButton", 345, 370);
@@ -43,7 +43,7 @@ var scenes;
             // add this scene to the global stage container
             stage.addChild(this);
         };
-        /*Method to reset everything */
+        /*Method to reset the numbers */
         Play.prototype._resetAll = function () {
             this._number1 = 1;
             this._number2 = 1;
