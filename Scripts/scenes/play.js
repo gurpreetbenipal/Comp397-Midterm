@@ -16,12 +16,8 @@ var scenes;
         // Start Method
         Play.prototype.start = function () {
             //Add Play Label
-            /* this._playLabel = new objects.Label(
-                 "PLAY SCENE","60px Consolas",
-                 "#000000",
-                 config.Screen.CENTER_X,config.Screen.CENTER_Y);
-             this.addChild(this._playLabel);
-             */
+            this._playLabel = new objects.Label("ROLL THE DICE", "40px Cambria", "#FFCC00", config.Screen.CENTER_X, config.Screen.CENTER_Y - 200);
+            this.addChild(this._playLabel);
             //Reset Everything
             this._resetAll();
             //Add Image for Dice 1 in the scene
@@ -35,13 +31,13 @@ var scenes;
             this._dice2.y = 100;
             this.addChild(this._dice2);
             //Add the Label for Dice 1 Result
-            this._label1 = new objects.Label(this._number1.toString(), "bold 20px Cambria", "#000000", 150, 300);
+            this._label1 = new objects.Label(this._number1.toString(), "bold 20px Cambria", "#000000", 165, 300);
             this.addChild(this._label1);
             //Add the Label for Dice 1 Result
-            this._label2 = new objects.Label(this._number2.toString(), "bold 20px Cambria", "#000000", 450, 300);
+            this._label2 = new objects.Label(this._number2.toString(), "bold 20px Cambria", "#000000", 465, 300);
             this.addChild(this._label2);
             //Add the Roll Button to the scene
-            this._rollButton = new objects.Button("RollButton", 352, 400);
+            this._rollButton = new objects.Button("RollButton", 345, 370);
             this.addChild(this._rollButton);
             this._rollButton.on("click", this._rollButtonClick, this);
             // add this scene to the global stage container
@@ -62,8 +58,10 @@ var scenes;
             /* Generate 2 Random numbers */
             var random1 = Math.floor(Math.random() * 6 + 1);
             var random2 = Math.floor(Math.random() * 6 + 1);
+            /*Displaying the random numbers generated on the Labels */
             this._label1.text = random1.toString();
             this._label2.text = random2.toString();
+            /*Displaying the image corresponding to those numbers*/
             this._dice1.image = assets.getResult(random1.toString());
             this._dice2.image = assets.getResult(random2.toString());
         };
